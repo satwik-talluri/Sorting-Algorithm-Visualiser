@@ -8,22 +8,32 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
 </head>
 <body>
 
 <div id=header>
       <div class="container-fluid">
-        <div class="page-header text-center" style="padding: 10px;background-color:#F4EFEA;color: #7D141D">
+        <div class="page-header text-center" style="padding: 10px;background-color:#F4EFEA;color: #7D141D;">
         	<h1>Sorting Algorithm Visualiser </h1></div>
       </div>
     </div>
 <div class="container-fluid">
         <div class="row">
-        	<div class="col text-center " style="margin-top: 30px;border-left: 1px;">
-        		<button type="button" class="btn btn-danger">Generate New Array</button>
+        	<div class="col-sm-3 text-center " style="margin-top: 30px;border-left: 1px;">
+        		<button type="button" class="btn btn-danger" >Generate New Array</button>
         	</div>
-        	<div class="col text-center " style="margin-top: 30px;">
-        		<button type="button" class="btn btn-info">.....</button>
+        	<div class="col-sm-4 text-center " style="margin-top: 30px; border-left: 0.5px solid black;;border-right: 0.5px solid black;">
+        		<div class="text-center">
+              <div>
+                <label for="size"><span style="font-size: 25px;">Adjust Size: </span></label>
+                <input type="range" id="size" name="size" min="10" max="50" >
+              </div>
+             <div>
+              <label for="speed" ><span style="font-size:25px"> Adjust Speed: </span></label>
+              <input type="range" id="speed" name="speed" min="10" max="50" >
+             </div>
+            </div>
         	</div>
         	<div class="col text-center " style="margin-top: 30px;">
         		<button type="button" class="btn btn-danger" style="margin-left:6px;margin-bottom: 10px;">Merge Sort</button>
