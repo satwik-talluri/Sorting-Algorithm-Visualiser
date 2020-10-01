@@ -33,7 +33,7 @@ function fun(arr,j,bar){
 }    
     
 function fun3(arr,j,bar){
-    bar[j].style['border-left']="5px solid yellow";
+    bar[j].style['border-left']="5px solid orange";
 }
 
 
