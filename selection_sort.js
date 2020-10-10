@@ -28,12 +28,12 @@ function func() {
         bar[i].style.height = arr[i];
         bar[min_idx].style.height = arr[min_idx];
         bar[i].style['border-left'] = "5px solid blue";
-        bar[min_idx].style['border-left'] = "5px solid orange";
+        bar[min_idx].style['border-left'] = "5px solid blue";
     }
 
     var min_idx;
     var add = 0;
-    var del = 100;
+    var del = 500;
     for (let i = 0; i < bar.length - 1; i++) {
         // Find the minimum element in unsorted array  
         min_idx = i;

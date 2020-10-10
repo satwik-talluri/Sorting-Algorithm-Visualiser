@@ -26,15 +26,15 @@ function func() {
     function fun(arr, j, bar) {
         arr[j + 1] = arr[j];
         bar[j + 1].style.height = arr[j + 1];
-        bar[j].style['border-left'] = "5px solid blue";
-        bar[j + 1].style['border-left'] = "5px solid blue";
+        bar[j].style['border-left'] = "5px solid orange";
+        bar[j + 1].style['border-left'] = "5px solid orange";
     }
 
     function fun1(arr, j, key, i) {
         arr[j + 1] = key + "px";
         bar[j + 1].style.height = arr[j + 1];
-        bar[j + 1].style['border-left'] = "5px solid blue";
-        bar[i].style['border-left'] = "5px solid blue";
+        bar[j + 1].style['border-left'] = "5px solid orange";
+        bar[i].style['border-left'] = "5px solid orange";
     }
 
     function fun2(arr, j, bar) {
