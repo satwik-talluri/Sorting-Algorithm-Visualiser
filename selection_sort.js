@@ -33,7 +33,7 @@ function func() {
 
     var min_idx;
     var add = 0;
-    var del = 500;
+    var del=Math.floor((20000/Math.floor(speed)));
     for (let i = 0; i < bar.length - 1; i++) {
         // Find the minimum element in unsorted array  
         min_idx = i;

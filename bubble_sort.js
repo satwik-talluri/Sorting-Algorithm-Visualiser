@@ -40,7 +40,7 @@ function fun3(arr,j,bar){
 var len = b.length,
         i, j, stop;
     var adder = 0;
-    var del=100;
+    var del=Math.floor((20000/Math.floor(speed)));
     for (i=0; i < len; i++){
     
         for (j=0, stop=len-i; j < stop; j++){

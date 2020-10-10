@@ -54,7 +54,7 @@ function func() {
 
     var j, key;
     var add = 0;
-    var del = 100;
+    var del=Math.floor((20000/Math.floor(speed)));
     for (let i = 1; i < bar.length; i++) {
         j = i - 1;
         key = b[i];

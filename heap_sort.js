@@ -41,7 +41,7 @@ function fun3(arr,j,bar){
 
 
 var adder=0;
-var del=100;
+var del=Math.floor((20000/Math.floor(speed)));
 
 function heapify(b,arr,n,i,bar)
 {
@@ -59,9 +59,9 @@ function heapify(b,arr,n,i,bar)
         temp=b[largest];
         b[largest]=b[i];
         b[i]=temp;
-                adder+=del/3;
+                adder+=del/5-50;
                 setTimeout(fun1,adder,arr,i,largest,bar);
-                adder+=del/3;
+                adder+=del/5-50;
                 setTimeout(fun,adder,arr,i,largest,bar);
         heapify(b,arr,n,largest,bar); 
     }
@@ -80,11 +80,11 @@ function heapsort(b, arr, n,bar)
         temp=b[0];
         b[0]=b[i];
         b[i]=temp;
-            adder+=del/3;
+            adder+=del/5-50;
             setTimeout(fun1,adder,arr,0,i,bar);
-                adder+=del/3;
+                adder+=del/5-50;
                 setTimeout(fun,adder,arr,0,i,bar);
-                adder+=del/3;
+                adder+=del/5-50;
                 setTimeout(fun3,adder,arr,i,bar);
         heapify(b,arr,i,0,bar); 
     }
