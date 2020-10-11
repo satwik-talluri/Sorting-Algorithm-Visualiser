@@ -31,27 +31,37 @@ function func() {
         bar[min_idx].style['border-left'] = "5px solid blue";
     }
 
+    function fun3(arr, j, bar) {
+        bar[j].style['border-left'] = "5px solid orange";
+    }
+
     var min_idx;
     var add = 0;
-    var del=Math.floor((20000/Math.floor(speed)));
-    for (let i = 0; i < bar.length - 1; i++) {
+    var del = Math.floor((20000 / Math.floor(speed)));
+    for (let i = 0; i < bar.length; i++) {
         // Find the minimum element in unsorted array  
         min_idx = i;
-        for (let j = i + 1; j < bar.length; j++)
-            if (b[j] < b[min_idx])
-                min_idx = j;
+        if (i < bar.length - 1) {
+            for (let j = i + 1; j < bar.length; j++)
+                if (b[j] < b[min_idx])
+                    min_idx = j;
 
-            // Swap the found minimum element with the first element  
-        var temp = b[i];
-        b[i] = b[min_idx];
-        b[min_idx] = temp;
+                // Swap the found minimum element with the first element  
+            var temp = b[i];
+            b[i] = b[min_idx];
+            b[min_idx] = temp;
 
-        add += del / 2;
-        setTimeout(fun1, add, arr, i, min_idx);
-        add += del / 2;
-        setTimeout(fun, add, arr, i, min_idx);
+            add += del / 5 - 50;
+            setTimeout(fun1, add, arr, i, min_idx);
+            add += del / 5 - 50;
+            setTimeout(fun, add, arr, i, min_idx);
 
-
+            add += del / 5 - 50;
+            setTimeout(fun3, add, arr, i, bar);
+        } else {
+            add += del / 5 - 50;
+            setTimeout(fun3, add, arr, i, bar);
+        }
     }
 
 
