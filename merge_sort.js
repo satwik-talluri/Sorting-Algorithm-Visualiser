@@ -21,25 +21,25 @@ function func(){
     function fun(arr,L,k,i,bar){
         arr[k]=L[i]+"px";
         bar[k].style.height=arr[k];
-        bar[k].style['border-left']="5px solid blue";
+        bar[k].style['border-left']="5px solid orange";
     }
 
     function fun1(arr,R,k,j,bar){
         arr[k]=R[j]+"px";
         bar[k].style.height=arr[k];
-        bar[k].style['border-left']="5px solid blue";
+        bar[k].style['border-left']="5px solid orange";
     }
 
     function fun2(arr,L,k,i,bar){
         arr[k]=L[i]+"px";
         bar[k].style.height=arr[k];
-        bar[k].style['border-left']="5px solid blue";
+        bar[k].style['border-left']="5px solid orange";
     }
 
     function fun3(arr,R,k,j,bar){
         arr[k]=R[j]+"px";
         bar[k].style.height=arr[k];
-        bar[k].style['border-left']="5px solid blue";
+        bar[k].style['border-left']="5px solid orange";
     }
 
 function fun4(arr,L,k,i,bar){
@@ -87,17 +87,17 @@ var del=Math.floor((20000/Math.floor(speed)));
     while (i < n1 && j < n2) { 
         if (L[i] <= R[j]) { 
             b[k] = L[i];
-            add+=del/8;
+            add += del / 5 - 50;
             setTimeout(fun4,add,arr,L,k,i,bar);
-            add+=del/8;
+            add += del / 5 - 50;
             setTimeout(fun,add,arr,L,k,i,bar); 
             i++; 
         } 
         else { 
             b[k] = R[j];
-            add+=del/8;
+            add += del / 5 - 50;
             setTimeout(fun5,add,arr,R,k,j,bar);
-            add+=del/8;
+            add += del / 5 - 50;
             setTimeout(fun1,add,arr,R,k,j,bar); 
             j++; 
         } 
@@ -106,18 +106,18 @@ var del=Math.floor((20000/Math.floor(speed)));
 
     while (i < n1) { 
         b[k] = L[i];
-        add+=del/8;
+        add += del / 5 - 50;
         setTimeout(fun6,add,arr,L,k,i,bar);
-        add+=del/8;
+        add += del / 5 - 50;
         setTimeout(fun2,add,arr,L,k,i,bar); 
         i++; 
         k++; 
     } 
     while (j < n2) { 
         b[k] = R[j];
-        add+=del/8;
+        add += del / 5 - 50;
         setTimeout(fun7,add,arr,R,k,j,bar);
-        add+=del/8;
+        add += del / 5 - 50;
         setTimeout(fun3,add,arr,R,k,j,bar); 
         j++; 
         k++; 
