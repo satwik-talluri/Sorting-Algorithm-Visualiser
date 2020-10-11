@@ -21,25 +21,25 @@ function func(){
     function fun(arr,L,k,i,bar){
         arr[k]=L[i]+"px";
         bar[k].style.height=arr[k];
-        bar[k].style['border-left']="5px solid blue";
+        bar[k].style['border-left']="5px solid orange";
     }
 
     function fun1(arr,R,k,j,bar){
         arr[k]=R[j]+"px";
         bar[k].style.height=arr[k];
-        bar[k].style['border-left']="5px solid blue";
+        bar[k].style['border-left']="5px solid orange";
     }
 
     function fun2(arr,L,k,i,bar){
         arr[k]=L[i]+"px";
         bar[k].style.height=arr[k];
-        bar[k].style['border-left']="5px solid blue";
+        bar[k].style['border-left']="5px solid orange";
     }
 
     function fun3(arr,R,k,j,bar){
         arr[k]=R[j]+"px";
         bar[k].style.height=arr[k];
-        bar[k].style['border-left']="5px solid blue";
+        bar[k].style['border-left']="5px solid orange";
     }
 
 function fun4(arr,L,k,i,bar){
