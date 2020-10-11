@@ -23,6 +23,11 @@ function func() {
     //     console.log(arr[i]);
     // }
 
+    function fun1(arr, j, bar) {
+        bar[j].style['border-left'] = "5px solid green";
+        bar[j + 1].style['border-left'] = "5px solid red";
+    }
+
     function fun(arr, j, bar) {
         arr[j + 1] = arr[j];
         bar[j + 1].style.height = arr[j + 1];
@@ -30,50 +35,41 @@ function func() {
         bar[j + 1].style['border-left'] = "5px solid orange";
     }
 
-    function fun1(arr, j, key, i) {
-        arr[j + 1] = key + "px";
+    function fun4(arr, j, key, bar) {
+        arr[j + 1] = key;
         bar[j + 1].style.height = arr[j + 1];
         bar[j + 1].style['border-left'] = "5px solid orange";
-        bar[i].style['border-left'] = "5px solid orange";
     }
 
-    function fun2(arr, j, bar) {
-        bar[j].style['border-left'] = "5px solid red";
-        bar[j + 1].style['border-left'] = "5px solid red";
-    }
-
-    function fun3(j, i) {
-        bar[j + 1].style['border-left'] = "5px solid red";
-        bar[i].style['border-left'] = "5px solid red";
-
-    }
-
-    function fun10(arr, j) {
+    function fun3(arr, j, bar) {
         bar[j].style['border-left'] = "5px solid orange";
     }
 
-    var j, key;
+    var j, key, key2;
     var add = 0;
-    var del=Math.floor((20000/Math.floor(speed)));
+    var del = Math.floor((20000 / Math.floor(speed)));
+    add += del / 5 - 50;
+    setTimeout(fun3, add, arr, 0, bar);
     for (let i = 1; i < bar.length; i++) {
         j = i - 1;
         key = b[i];
+        key2 = arr[i];
         while (j >= 0 && b[j] > key) {
             b[j + 1] = b[j];
-            add += del / 5;
-            setTimeout(fun2, add, arr, j, bar);
-            add += del / 5;
+            add += del / 5 - 50;
+            setTimeout(fun1, add, arr, j, bar);
+            add += del / 5 - 50;
             setTimeout(fun, add, arr, j, bar);
             j = j - 1;
         }
         b[j + 1] = key;
-        add += del / 5;
-        setTimeout(fun3, add, j, i);
-        add += del / 5;
-        setTimeout(fun1, add, arr, j, key, i);
+        add += del / 5 - 50;
+        setTimeout(fun4, add, arr, j, key2, bar);
+        // add+=del/5-50;
+        // setTimeout(fun, add, arr, j, bar);
     }
-    add += del / 5;
-    setTimeout(fun10, add, arr, 0);
+    // add+=del/5-50;
+    // setTimeout(fun10, add, arr, 0);
 
 
 }
