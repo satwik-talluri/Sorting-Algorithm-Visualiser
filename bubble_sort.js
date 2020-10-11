@@ -49,15 +49,15 @@ var len = b.length,
                 var temp1=b[j];
                 b[j]=b[j+1];
                 b[j+1]=temp1;
-                adder+=del/3;
+                adder += del / 5 - 50;
                 setTimeout(fun1,adder,arr,j,bar);
-                adder+=del/3;
+                adder += del / 5 - 50;
                 setTimeout(fun,adder,arr,j,bar);
                 
             }
             
         }
-        adder+=del/3;
+        adder += del / 5 - 50;
         setTimeout(fun3,adder,arr,len-1-i,bar);
     }
 }
