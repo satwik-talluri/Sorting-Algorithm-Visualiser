@@ -15,7 +15,7 @@ function func() {
         b.push(parseInt(arr[i]));
         arr[i] += "px";
     }
-    // for(let i=0;i<bar.length;i++){
+    // for(leti=0;i<bar.length;i++){
     //     console.log(b[i]);
     // }
 
